@@ -125,6 +125,7 @@ const creativeMindList: creativeMind[] = [
     position: 'Web & Content Coordinator',
     instagramLink: 'https://instagram.com/sohammayekar_',
     linkedinLink: 'https://linkedin.com/in/sohammayekar',
+    twitterLink: '',
   },
   {
     image: '/images/home/creative/creative_img_2.png',
@@ -132,13 +133,15 @@ const creativeMindList: creativeMind[] = [
     position: 'Content Creator & Admin Executive',
     instagramLink: 'https://instagram.com/deveshkushe',
     linkedinLink: '',
+    twitterLink: '',
   },
   {
     image: '/images/home/creative/creative_img_3.png',
     name: 'Rudraksha Patil',
     position: 'Operations & Client Manager',
     instagramLink: 'https://instagram.com/rrudraksha',
-    linkedinLink: '',
+    linkedinLink: '', // Added missing linkedinLink property
+    twitterLink: '',
   },
 ]
 
@@ -304,22 +307,25 @@ const achievementsList: achievements[] = [
     dark_icon: '/images/home/achievement/web.svg',
     sub_title: 'Web Presence Strategy',
     title: 'Design + Development of high-conversion business & creator websites.',
-    year: 'Built for Modern Brands'
+    year: 'Built for Modern Brands',
+    url: '', // Added missing url property
   },
   {
     icon: '/images/home/achievement/content.svg',
     dark_icon: '/images/home/achievement/content.svg',
     sub_title: 'Content Creation Systems',
     title: 'Reel production, social calendar, and audience-first storytelling.',
-    year: 'Real-Time Relevance'
+    year: 'Real-Time Relevance',
+    url: '', // Added missing url property
   },
   {
     icon: '/images/home/achievement/growth.svg',
     dark_icon: '/images/home/achievement/growth.svg',
     sub_title: 'Growth Experiments',
     title: 'A/B testing, analytics tracking, and platform-specific engagement tactics.',
-    year: 'Evolving by Design'
-  }
+    year: 'Evolving by Design',
+    url: '', // Added missing url property
+  },
 ]
 
 

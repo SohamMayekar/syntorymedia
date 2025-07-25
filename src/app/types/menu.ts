@@ -1,3 +1,5 @@
+// Removed unnecessary import for creativeMind
+
 export type HeaderItem = {
   label: string;
   href: string;
@@ -34,6 +36,7 @@ export type creativeMind = {
   position: string;
   twitterLink: string;
   linkedinLink: string;
+  instagramLink?: string; // Optional property
 }
 
 export type WebResultTag = {
