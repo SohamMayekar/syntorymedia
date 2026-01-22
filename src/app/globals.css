@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  /* Premium 'Ink & Paper' Palette (OKLCH) - High Contrast */
+  --color-paper: oklch(0.99 0.005 100);
+  /* Brighter, cleaner paper (less gray) */
+  --color-ink-900: oklch(0.12 0.01 260);
+  /* Rich, deep indigo-black (Primary Text) */
+  --color-ink-800: oklch(0.20 0.02 260);
+  /* Soft black (Headings) */
+  --color-ink-500: oklch(0.40 0.02 260);
+  /* Darker gray (was 0.55) - Improved readability */
+  --color-ink-300: oklch(0.85 0.01 260);
+  /* Borders */
+  --color-ink-100: oklch(0.96 0.005 260);
+  /* Light backgrounds */
+  --color-brand: oklch(0.55 0.22 260);
+  /* Deep Electric Blue */
+
+  --color-primary: var(--color-ink-900);
+  --color-glass: rgba(255, 255, 255, 0.6);
+  --color-glass-border: rgba(255, 255, 255, 0.4);
+  --shadow-colored: 0 10px 40px -10px oklch(0.55 0.22 260 / 0.15);
+
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-bricolage);
+  --font-mono: var(--font-fragment);
+
+  --animate-fade-in-up: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-float: float 8s ease-in-out infinite;
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink-900);
+  position: relative;
+  font-feature-settings: "ss01", "ss02", "salt";
+  /* Editorial font features */
+}
+
+/* Noise texture removed for clean look */
+body::before {
+  display: none;
+}
+
+/* Vignette removed for clarity */
+body::after {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  /* Color removed - let Tailwind classes control it */
+}
+
+.text-caption {
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  /* Wide explicit feel */
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+/* Glass panel updates for Ink system */
+.glass-panel {
+  background: var(--color-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-glass-border);
+}
+
+.glass-premium {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.02),
+    0 10px 15px -3px rgba(0, 0, 0, 0.04),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.02);
+}
+
+/* Perspective utility for 3D tilts */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
