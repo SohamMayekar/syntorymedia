@@ -3,6 +3,7 @@
 import React, { useState, useCallback } from 'react';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from './Button';
 
 // Static data hoisted outside component (Vercel best practice: avoid re-creation on every render)
@@ -33,8 +34,8 @@ export const Navbar: React.FC = () => {
                 <div className="glass-premium rounded-full px-4 py-[7px] flex items-center justify-between gap-6">
 
                     {/* Logo */}
-                    <div className="flex-shrink-0 cursor-pointer pl-2" onClick={() => window.scrollTo(0, 0)}>
-                        <div className="relative w-24 h-6">
+                    <Link href="/" className="flex-shrink-0 pl-2">
+                        <div className="relative w-28 md:w-32 h-8">
                             <Image
                                 src="/logo.svg"
                                 alt="Syntory"
@@ -43,7 +44,7 @@ export const Navbar: React.FC = () => {
                                 priority
                             />
                         </div>
-                    </div>
+                    </Link>
 
                     {/* Desktop Links */}
                     <div className="hidden md:flex items-center gap-1">
@@ -65,15 +66,16 @@ export const Navbar: React.FC = () => {
                             className="rounded-full px-6 py-1.5 text-xs font-semibold hidden md:flex shadow-none hover:shadow-lg hover:shadow-brand/10 transition-all border border-transparent hover:border-brand/10 h-auto whitespace-nowrap bg-ink-900 text-white"
                             onClick={() => window.location.href = 'tel:+919511687723'}
                         >
-                            Book a Call
+                            Call Us Now
                         </Button>
 
                         {/* Mobile Menu Button */}
                         <button
                             onClick={toggleMobileMenu}
-                            className="p-1.5 text-ink-500 hover:text-ink-900 focus:outline-none md:hidden bg-transparent hover:bg-ink-100 rounded-full transition-colors"
+                            className="min-w-[44px] min-h-[44px] p-3 text-ink-500 hover:text-ink-900 focus:outline-none md:hidden bg-transparent hover:bg-ink-100 rounded-full transition-colors flex items-center justify-center"
+                            aria-label="Toggle menu"
                         >
-                            {isMobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
+                            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
                         </button>
                     </div>
 
@@ -82,12 +84,12 @@ export const Navbar: React.FC = () => {
 
             {/* Mobile Menu Overlay - Using ternary instead of && (Vercel best practice: explicit conditional rendering) */}
             {isMobileMenuOpen ? (
-                <div className="fixed inset-0 z-40 bg-[#fdf6f0]/95 backdrop-blur-3xl flex flex-col items-center justify-center animate-fade-in-up">
+                <div className="fixed inset-0 z-40 bg-[#fdf6f0]/98 backdrop-blur-3xl flex flex-col items-center justify-center pt-20 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] animate-fade-in-up">
                     <div className="absolute top-6 right-[5%]">
                         {/* Close button is handled by the Navbar which sits on top z-50 */}
                     </div>
 
-                    <div className="flex flex-col items-center space-y-8">
+                    <div className="flex flex-col items-center space-y-6">
                         {navLinks.map((link, index) => (
                             <a
                                 key={link.name}
@@ -104,7 +106,7 @@ export const Navbar: React.FC = () => {
                                 closeMobileMenu();
                                 window.location.href = 'tel:+919511687723';
                             }}>
-                                Book a Call
+                                Call Us Now
                             </Button>
                         </div>
                     </div>

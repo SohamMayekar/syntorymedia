@@ -126,3 +126,55 @@ h6 {
 .preserve-3d {
   transform-style: preserve-3d;
 }
+
+/* Premium Diffuse Button Shadow - softer, more elevated look */
+.shadow-premium {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 10px 20px -5px rgba(0, 0, 0, 0.08),
+    0 20px 40px -10px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-premium-blue {
+  box-shadow:
+    0 4px 6px -1px rgba(7, 28, 175, 0.08),
+    0 10px 20px -5px rgba(7, 28, 175, 0.12),
+    0 20px 40px -10px rgba(7, 28, 175, 0.10);
+}
+
+/* Enhanced letter-spacing for uppercase section labels */
+.text-section-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Mobile Carousel: Hide scrollbar for native app feel */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+/* Carousel dot indicator styles */
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-ink-300);
+  transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+  background-color: var(--color-ink-900);
+  width: 24px;
+  border-radius: 4px;
+}

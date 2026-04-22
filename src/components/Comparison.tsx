@@ -43,8 +43,8 @@ export const Comparison: React.FC = () => {
 
     return (
         <Section className="relative overflow-hidden">
-            <div className="text-center mb-20">
-                <span className="text-slate-500 font-mono font-medium tracking-widest text-xs uppercase mb-4 block">The Difference</span>
+            <div className="text-center mb-12 md:mb-20">
+                <span className="text-slate-500 font-mono font-semibold tracking-wider md:tracking-[0.15em] text-sm md:text-xs uppercase mb-4 block">The Difference</span>
                 <TextReveal className="font-display text-4xl md:text-6xl font-medium tracking-tighter text-slate-900 mb-6 justify-center">Not All Agencies Are Equal</TextReveal>
             </div>
 
@@ -61,24 +61,24 @@ export const Comparison: React.FC = () => {
                     }}
                 />
 
-                <div className="grid md:grid-cols-2 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 relative z-10">
                     {/* Left Column: Others */}
-                    <div className="p-8 md:p-12 border-b md:border-b-0 md:border-r border-slate-200 bg-slate-100/50">
-                        <h3 className="font-display text-2xl font-bold text-slate-400 mb-8 flex items-center gap-3">
+                    <div className="p-6 md:p-8 lg:p-12 border-b md:border-b-0 md:border-r border-slate-200 bg-slate-100/50">
+                        <h3 className="font-display text-xl md:text-2xl font-bold text-slate-400 mb-6 md:mb-8 flex items-center gap-3">
                             <span className="opacity-50">Other Agencies</span>
                         </h3>
                         <div className="space-y-6">
                             {others.map((item, i) => (
-                                <div key={i} className="flex items-center gap-4 text-slate-400 group/item transition-colors">
-                                    <XCircle size={20} className="shrink-0 text-slate-300 group-hover/item:text-red-400 transition-colors" />
-                                    <span className="font-sans text-lg line-through decoration-slate-300/50 group-hover/item:decoration-red-200 transition-all">{item}</span>
+                                <div key={i} className="flex items-center gap-4 text-slate-500 group/item transition-colors">
+                                    <XCircle size={18} className="shrink-0 text-slate-400 group-hover/item:text-red-400 transition-colors md:w-5 md:h-5" />
+                                    <span className="font-sans text-base md:text-lg line-through decoration-slate-400/50 group-hover/item:decoration-red-200 transition-all">{item}</span>
                                 </div>
                             ))}
                         </div>
                     </div>
 
                     {/* Right Column: Us (Syntory) */}
-                    <div className="relative p-8 md:p-12 bg-white/50">
+                    <div className="relative p-6 md:p-8 lg:p-12 bg-white/50">
                         <div
                             className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                             style={{
@@ -94,18 +94,18 @@ export const Comparison: React.FC = () => {
                             }}
                         />
 
-                        <h3 className="font-display text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                        <h3 className="font-display text-xl md:text-2xl font-bold text-slate-900 mb-6 md:mb-8 flex items-center gap-3">
                             <span>With Syntory</span>
-                            <div className="px-2 py-0.5 rounded-full bg-yellow-400/20 text-yellow-700 text-xs font-bold tracking-wide uppercase">Proven</div>
+                            <div className="px-2 py-0.5 rounded-full bg-[#071caf]/15 text-[#071caf] text-xs font-bold tracking-wide uppercase">Proven</div>
                         </h3>
                         <div className="space-y-6">
                             {us.map((item, i) => (
                                 <div key={i} className="flex items-center gap-4 group/item">
                                     <div className="relative shrink-0">
-                                        <div className="absolute inset-0 bg-yellow-400 rounded-full blur opacity-20 group-hover/item:opacity-60 transition-opacity"></div>
-                                        <CheckCircle2 size={24} className="relative text-slate-900 fill-yellow-400" />
+                                        <div className="absolute inset-0 bg-[#071caf] rounded-full blur opacity-20 group-hover/item:opacity-60 transition-opacity"></div>
+                                        <CheckCircle2 size={24} className="relative text-white fill-[#071caf]" />
                                     </div>
-                                    <span className="font-sans text-lg font-medium text-slate-800 group-hover/item:text-black group-hover/item:translate-x-1 transition-all duration-300">{item}</span>
+                                    <span className="font-sans text-base md:text-lg font-medium text-slate-800 group-hover/item:text-black group-hover/item:translate-x-1 transition-all duration-300">{item}</span>
                                 </div>
                             ))}
                         </div>

@@ -11,7 +11,7 @@ export function OrganizationSchema() {
         name: 'Syntory Media',
         url: 'https://syntorymedia.com',
         logo: 'https://syntorymedia.com/logo.svg',
-        description: 'Premium web design agency building authority-generating digital homes that turn traffic into high-ticket clients.',
+        description: 'Website design agency for founder-led brands, building conversion-focused sites that improve trust, lead quality, and search visibility.',
         foundingDate: '2024',
         address: {
             '@type': 'PostalAddress',
@@ -48,7 +48,7 @@ export function WebSiteSchema() {
         '@type': 'WebSite',
         name: 'Syntory Media',
         url: 'https://syntorymedia.com',
-        description: 'Premium Web Design Agency in Mumbai - Building authority-generating digital homes',
+        description: 'Website design agency for founder-led brands in Mumbai and beyond.',
         publisher: {
             '@type': 'Organization',
             name: 'Syntory Media',
@@ -73,7 +73,7 @@ export function LocalBusinessSchema() {
         url: 'https://syntorymedia.com',
         telephone: '+91-9511687723',
         email: 'hello@syntorymedia.com',
-        priceRange: '₹₹₹',
+        priceRange: 'Custom quote',
         address: {
             '@type': 'PostalAddress',
             streetAddress: 'Hiranandani',
@@ -100,30 +100,30 @@ export function LocalBusinessSchema() {
         ],
         hasOfferCatalog: {
             '@type': 'OfferCatalog',
-            name: 'Web Design Services',
+            name: 'Website Strategy and Development Services',
             itemListElement: [
                 {
                     '@type': 'Offer',
                     itemOffered: {
                         '@type': 'Service',
-                        name: 'The Signal - Single Page Website',
-                        description: 'High-converting one-page design with lead capture architecture',
+                        name: 'Conversion-Focused Website Strategy',
+                        description: 'Positioning, page structure, and conversion planning for founder-led brands.',
                     },
                 },
                 {
                     '@type': 'Offer',
                     itemOffered: {
                         '@type': 'Service',
-                        name: 'The Authority - Multi-Page Website',
-                        description: '5-7 page storytelling structure with deep SEO optimization',
+                        name: 'Custom Website Design and Development',
+                        description: 'Design and build in Next.js with responsive UX, speed, and clear content hierarchy.',
                     },
                 },
                 {
                     '@type': 'Offer',
                     itemOffered: {
                         '@type': 'Service',
-                        name: 'The Empire - Full Scale E-commerce',
-                        description: '10+ custom engineered pages with full e-commerce integration',
+                        name: 'SEO and AEO Content Structure',
+                        description: 'Search-friendly and answer-friendly page structure, metadata, and schema for visibility.',
                     },
                 },
             ],

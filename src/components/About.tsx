@@ -2,27 +2,26 @@
 
 import React from 'react';
 import { Section } from './Section';
-import { MousePointer2, MessageSquare, CheckCircle2, Layout, Smartphone, Globe } from 'lucide-react';
-import { Button } from './Button';
+import { MousePointer2, CheckCircle2, Layout, Smartphone, Globe } from 'lucide-react';
 
 export const About: React.FC = () => {
     return (
         <Section id="about">
             {/* Header */}
-            <div className="text-center mb-20 md:mb-32">
-                <span className="text-slate-500 font-mono font-medium tracking-widest text-xs uppercase mb-6 block">Benefits</span>
+            <div className="text-center mb-12 md:mb-20 lg:mb-32">
+                <span className="text-slate-500 font-mono font-semibold tracking-wider md:tracking-[0.15em] text-sm md:text-xs uppercase mb-6 block">Outcomes</span>
                 <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tighter leading-tight max-w-2xl mx-auto">
-                    <span className="text-slate-900">Why Fast-Moving</span> <br className="hidden md:block" />
-                    <span className="bg-gradient-to-r from-[#071caf] via-blue-600 to-[#071caf] bg-clip-text text-transparent">Founders Pick Us</span>
+                    <span className="text-slate-900">What your website</span> <br className="hidden md:block" />
+                    <span className="bg-gradient-to-r from-[#071caf] via-blue-600 to-[#071caf] bg-clip-text text-transparent">should actually do</span>
                 </h2>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
-                {/* Card 1: Designed to Convert */}
+                {/* Card 1: Look credible */}
                 <div className="group relative bg-white rounded-2xl p-2 border border-ink-100 ring-1 ring-ink-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col hover:-translate-y-1">
                     {/* Graphic Area */}
-                    <div className="h-64 bg-ink-100/50 rounded-xl mb-8 relative overflow-hidden flex items-center justify-center">
+                    <div className="h-48 md:h-64 bg-ink-100/50 rounded-xl mb-6 md:mb-8 relative overflow-hidden flex items-center justify-center">
                         {/* Background Grid */}
                         <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(#000_1px,transparent_1px),linear-gradient(90deg,#000_1px,transparent_1px)] [background-size:20px_20px]"></div>
 
@@ -47,17 +46,17 @@ export const About: React.FC = () => {
 
                     {/* Text Area */}
                     <div className="px-6 pb-8">
-                        <h3 className="font-display text-xl font-bold tracking-tight text-ink-900 mb-3">Designed to convert</h3>
+                        <h3 className="font-display text-xl font-bold tracking-tight text-ink-900 mb-3">Look credible in minutes</h3>
                         <p className="text-ink-500 leading-relaxed font-sans text-sm">
-                            Fund-ready sites that turn traffic into demos and signups. Clear product story & credible authority.
+                            Positioning-first pages that explain your offer quickly and make premium buyers trust you faster.
                         </p>
                     </div>
                 </div>
 
-                {/* Card 2: Built fast, without drama */}
+                {/* Card 2: Convert warm traffic */}
                 <div className="group relative bg-white rounded-2xl p-2 border border-ink-100 ring-1 ring-ink-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col hover:-translate-y-1">
                     {/* Graphic Area */}
-                    <div className="h-64 bg-ink-100/50 rounded-xl mb-8 relative overflow-hidden flex items-center justify-center">
+                    <div className="h-48 md:h-64 bg-ink-100/50 rounded-xl mb-6 md:mb-8 relative overflow-hidden flex items-center justify-center">
                         <div className="relative z-10 transform group-hover:-translate-y-1 transition-transform duration-500">
                             {/* Dark Card */}
                             <div className="bg-ink-900 text-white p-5 rounded-xl shadow-2xl w-48 border border-ink-800">
@@ -84,17 +83,17 @@ export const About: React.FC = () => {
 
                     {/* Text Area */}
                     <div className="px-6 pb-8">
-                        <h3 className="font-display text-xl font-bold tracking-tight text-ink-900 mb-3">Built fast, without drama</h3>
+                        <h3 className="font-display text-xl font-bold tracking-tight text-ink-900 mb-3">Convert warm traffic better</h3>
                         <p className="text-ink-500 leading-relaxed font-sans text-sm">
-                            2-3 week sprint from call to live site. No back-and-forth, polished code, and performant.
+                            Clear offer hierarchy, proof placement, and CTA flow designed to lift lead quality, not just clicks.
                         </p>
                     </div>
                 </div>
 
-                {/* Card 3: Progress every single day */}
+                {/* Card 3: Own your funnel */}
                 <div className="group relative bg-white rounded-2xl p-2 border border-ink-100 ring-1 ring-ink-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col hover:-translate-y-1">
                     {/* Graphic Area */}
-                    <div className="h-64 bg-ink-100/50 rounded-xl mb-8 relative overflow-hidden flex items-center justify-center">
+                    <div className="h-48 md:h-64 bg-ink-100/50 rounded-xl mb-6 md:mb-8 relative overflow-hidden flex items-center justify-center">
                         <div className="relative z-10 flex flex-col gap-2 w-40 group-hover:gap-3 transition-all duration-500">
                             {/* Notification 1 */}
                             <div className="bg-white border border-ink-100 p-2.5 rounded-lg shadow-sm flex items-center gap-3 transform -rotate-2 opacity-60 scale-95">
@@ -117,11 +116,13 @@ export const About: React.FC = () => {
                             </div>
 
                             {/* Notification 3 (Active) */}
-                            <div className="bg-white p-2.5 rounded-lg shadow-lg flex items-center gap-3 transform -rotate-1 scale-105 border border-ink-100 ring-1 ring-ink-100/50">
-                                <div className="bg-green-50 p-1.5 rounded-md">
-                                    <Globe size={12} className="text-green-600" />
+                            <div className="bg-white p-2.5 rounded-lg shadow-lg flex items-center gap-3 transform -rotate-1 scale-105 border border-ink-100 ring-1 ring-green-200/50 ring-2">
+                                <div className="bg-green-50 p-1.5 rounded-md relative">
+                                    <div className="absolute inset-0 bg-green-400 rounded-md blur-sm opacity-40 animate-pulse"></div>
+                                    <Globe size={12} className="text-green-600 relative z-10" />
                                 </div>
-                                <div>
+                                <div className="flex items-center gap-1.5">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
                                     <span className="text-[10px] font-bold block tracking-tight text-ink-800">Live now</span>
                                 </div>
                             </div>
@@ -130,19 +131,13 @@ export const About: React.FC = () => {
 
                     {/* Text Area */}
                     <div className="px-6 pb-8">
-                        <h3 className="font-display text-xl font-bold tracking-tight text-ink-900 mb-3">Progress every single day</h3>
+                        <h3 className="font-display text-xl font-bold tracking-tight text-ink-900 mb-3">Own your funnel</h3>
                         <p className="text-ink-500 leading-relaxed font-sans text-sm">
-                            Daily updates and Looms. See what's shipped, what's next, no chasing.
+                            You keep the domain, code, and data so growth compounds on your asset, not on rented platforms.
                         </p>
                     </div>
                 </div>
 
-            </div>
-
-            <div className="mt-20 text-center">
-                <Button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-                    Book a Strategy Call
-                </Button>
             </div>
 
         </Section>

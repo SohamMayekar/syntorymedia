@@ -3,7 +3,14 @@ import { Book, FileText, Settings, Shield } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: 'Documentation | Syntory Media',
-    description: 'Client resources and documentation.',
+    description: 'Client resources and documentation for Syntory Media projects.',
+    robots: {
+        index: false,
+        follow: false,
+    },
+    alternates: {
+        canonical: '/documentation',
+    },
 };
 
 const docs = [
@@ -11,25 +18,25 @@ const docs = [
         icon: FileText,
         title: 'Client Onboarding',
         description: 'Everything you need to know about starting your project with us.',
-        href: '#'
+        href: '/contact'
     },
     {
         icon: Settings,
         title: 'Technical Guides',
         description: 'How to manage your CMS, handle updates, and interpret analytics.',
-        href: '#'
+        href: '/contact'
     },
     {
         icon: Shield,
         title: 'Security & Compliance',
         description: 'Best practices for keeping your digital asset secure and compliant.',
-        href: '#'
+        href: '/contact'
     },
     {
         icon: Book,
         title: 'Brand Guidelines',
         description: 'Resources for maintaining your brand consistency across platforms.',
-        href: '#'
+        href: '/contact'
     }
 ];
 

@@ -29,25 +29,28 @@ export const Team: React.FC = () => {
     return (
         <Section id="team">
             <div className="text-center mb-20">
-                <h2 className="font-display text-4xl md:text-5xl font-extrabold tracking-tighter text-slate-900 mb-6">Meet the minds <br /> behind the magic.</h2>
+                <h2 className="font-display text-4xl md:text-5xl font-extrabold tracking-tighter mb-6 leading-tight">
+                    <span className="text-slate-900">The team behind</span> <br />
+                    <span className="bg-gradient-to-r from-[#071caf] via-blue-600 to-[#071caf] bg-clip-text text-transparent">your growth website</span>
+                </h2>
                 <p className="text-slate-600 max-w-2xl mx-auto font-light text-lg">
                     A lean team obsessed with clarity, aesthetics, and performance. We don't outsource quality.
                 </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto">
                 {team.map((member, index) => (
                     <div key={index} className="text-center group">
-                        <div className="relative w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white shadow-xl group-hover:scale-105 transition-transform duration-300 bg-slate-200">
+                        <div className="relative w-24 h-24 md:w-40 md:h-40 mx-auto mb-3 md:mb-6 rounded-full overflow-hidden border-2 md:border-4 border-white shadow-lg md:shadow-xl group-hover:scale-105 transition-transform duration-300 bg-slate-200">
                             <Image
                                 src={member.image}
                                 alt={member.name}
                                 fill
-                                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                                sizes="(max-width: 768px) 160px, 160px"
+                                className="object-cover md:grayscale group-hover:grayscale-0 transition-all duration-500"
+                                sizes="(max-width: 768px) 96px, 160px"
                             />
                         </div>
-                        <h3 className="font-display text-xl font-bold tracking-tight text-slate-900 mb-1">{member.name}</h3>
+                        <h3 className="font-display text-base md:text-xl font-bold tracking-tight text-slate-900 mb-1">{member.name}</h3>
                         <p className="text-[10px] font-medium text-primary uppercase tracking-widest font-mono">{member.role}</p>
                     </div>
                 ))}

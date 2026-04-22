@@ -4,6 +4,7 @@ import './globals.css';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { ScrollManager } from '@/components/ScrollManager';
+import { BottomCTA } from '@/components/BottomCTA';
 import { OrganizationSchema, WebSiteSchema, LocalBusinessSchema } from '@/components/JsonLd';
 
 const manrope = Manrope({
@@ -29,21 +30,23 @@ const fragmentMono = Fragment_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://syntorymedia.com'),
   title: {
-    default: 'Syntory Media | Premium Web Design Agency in Mumbai',
+    default: 'Syntory Media | Website Design Agency for Founder-Led Brands',
     template: '%s | Syntory Media',
   },
-  description: 'Stop building on rented land. We build premium digital homes and high-performance websites that turn visitors into customers. Premium web design agency in Mumbai, India.',
+  description: 'Syntory Media designs conversion-focused websites for founder-led brands, with strategy, copy, SEO, and Next.js development that improve trust and lead quality.',
   keywords: [
-    'web design agency',
-    'web development',
-    'premium websites',
-    'conversion optimization',
-    'SEO',
-    'Mumbai web design',
-    'high-end web design',
-    'startup websites',
-    'SaaS website design',
-    'landing page design',
+    'conversion-focused websites',
+    'website design agency',
+    'founder-led brand website',
+    'website lead quality improvement',
+    'website conversion strategy',
+    'next.js website agency',
+    'seo foundation website',
+    'answer engine optimization',
+    'website redesign for founders',
+    'mumbai web design agency',
+    'website positioning strategy',
+    'growth website partner',
     'website development India',
   ],
   authors: [{ name: 'Syntory Media', url: 'https://syntorymedia.com' }],
@@ -62,21 +65,21 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://syntorymedia.com',
     siteName: 'Syntory Media',
-    title: 'Syntory Media | Premium Web Design Agency',
-    description: 'Stop building on rented land. We build authority-generating digital homes that turn traffic into high-ticket clients.',
+    title: 'Syntory Media | Website Design Agency for Founder-Led Brands',
+    description: 'Syntory Media designs conversion-focused websites for founder-led brands with strategy, copy, SEO, and Next.js development.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Syntory Media - Premium Web Design Agency in Mumbai',
+        alt: 'Syntory Media - Website Design Agency for Founder-Led Brands',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Syntory Media | Premium Web Design Agency',
-    description: 'Stop building on rented land. We build premium digital homes that turn traffic into high-ticket clients.',
+    title: 'Syntory Media | Website Design Agency for Founder-Led Brands',
+    description: 'Syntory Media designs conversion-focused websites for founder-led brands with strategy, copy, SEO, and Next.js development.',
     images: ['/og-image.png'],
     creator: '@syntorymedia',
   },
@@ -115,6 +118,7 @@ export default function RootLayout({
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <BottomCTA />
         </ScrollManager>
       </body>
     </html>

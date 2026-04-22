@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, HTMLMotionProps } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends Omit<HTMLMotionProps<'button'>, 'children'> {
     variant?: 'primary' | 'outline' | 'ghost';
     size?: 'sm' | 'md' | 'lg';
     children: React.ReactNode;
@@ -57,11 +57,12 @@ export const Button: React.FC<ButtonProps> = ({
             animate={{ x: position.x, y: position.y }}
             transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
             className={cn(
-                "relative rounded-full font-medium transition-colors duration-300 flex items-center gap-2 group overflow-hidden",
+                "relative rounded-full font-medium transition-colors duration-300 flex items-center gap-2 group overflow-hidden cursor-pointer",
                 variants[variant],
                 sizes[size],
                 className
             )}
+            {...props}
         >
             <span className={cn(
                 "relative z-10 flex items-center gap-2 transition-colors duration-300",

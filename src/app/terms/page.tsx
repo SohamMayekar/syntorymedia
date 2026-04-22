@@ -2,7 +2,10 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Terms & Conditions | Syntory Media',
-    description: 'Terms and Conditions for Syntory Media services.',
+    description: 'Terms and Conditions for Syntory Media website design and development services.',
+    alternates: {
+        canonical: '/terms',
+    },
 };
 
 export default function TermsPage() {

@@ -2,7 +2,10 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Privacy Policy | Syntory Media',
-    description: 'Privacy Policy for Syntory Media.',
+    description: 'Privacy Policy for Syntory Media and the data we collect through our website and contact forms.',
+    alternates: {
+        canonical: '/privacy',
+    },
 };
 
 export default function PrivacyPage() {
