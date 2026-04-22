@@ -89,8 +89,8 @@ export const FAQ: React.FC = () => {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
             <h2 className="font-display text-4xl font-extrabold tracking-tighter text-ink-900 mb-4 text-center">Frequently Asked Questions</h2>
-            <p className="text-center text-slate-600 max-w-2xl mx-auto mb-12 text-sm md:text-base leading-relaxed">
-                Each answer is written in plain language so visitors, search engines, and AI systems can quickly understand what we do and who we help.
+            <p className="text-center text-slate-600 max-w-2xl mx-auto mb-12 text-sm md:text-base leading-relaxed font-light">
+                Clear answers to the most common questions about our strategy, design process, and how we help founder-led brands grow.
             </p>
             <div className="space-y-3 md:space-y-4">
                 {faqs.map((faq, index) => (
